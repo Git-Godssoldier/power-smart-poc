@@ -28,7 +28,7 @@
       "orderDateValid": true,
       "emailValid": true
     },
-    "durationMs": 1
+    "durationMs": 0
   },
   {
     "phase": "prepare_payloads",
@@ -42,6 +42,6 @@
     "phase": "push_to_acumatica",
     "success": false,
     "error": "Command failed: cat /opulent/workspace/artifacts/acumatica-payload.json | npx tsx scripts/acumatica/cli.ts push-both",
-    "durationMs": 748
+    "durationMs": 3145
   }
 ]
