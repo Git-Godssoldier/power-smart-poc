@@ -373,7 +373,10 @@ async function main(): Promise<void> {
     case "push-order": {
       const data = await readStdin();
       if (!data) { console.error(JSON.stringify({ error: "Pipe JSON to stdin" })); process.exit(1); }
-      const result = await pushSalesOrder(JSON.parse(data));
+      const order = JSON.parse(data);
+      const cust = await pushCustomer(order.customerName, order.email, order.phone, order.address);
+      console.error(`Customer: ${cust.id} (${cust.status})`);
+      const result = await pushSalesOrder(order, cust.id);
       console.log(JSON.stringify(result, null, 2));
       process.exit(result.success ? 0 : 1);
     }
@@ -388,8 +391,11 @@ async function main(): Promise<void> {
       const data = await readStdin();
       if (!data) { console.error(JSON.stringify({ error: "Pipe {order, warranty} JSON to stdin" })); process.exit(1); }
       const payload: { order: SalesOrderInput; warranty: WarrantyCaseInput } = JSON.parse(data);
+      // Auto-create Customer
+      const cust = await pushCustomer(payload.order.customerName, payload.order.email, payload.order.phone, payload.order.address);
+      console.error(`Customer: ${cust.id} (${cust.status})`);
       console.log("=== PUSHING ORDER ===");
-      const orderResult = await pushSalesOrder(payload.order);
+      const orderResult = await pushSalesOrder(payload.order, cust.id);
       console.log(JSON.stringify(orderResult, null, 2));
       console.log("\n=== PUSHING WARRANTY ===");
       const warrantyResult = await pushWarrantyCase(payload.warranty);

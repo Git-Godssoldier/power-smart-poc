@@ -16,7 +16,7 @@
       "purchaseProofRef": "17785367597992882103857233052183"
     },
     "error": "",
-    "durationMs": 0
+    "durationMs": 1
   },
   {
     "phase": "validation",
@@ -42,6 +42,6 @@
     "phase": "push_to_acumatica",
     "success": false,
     "error": "Command failed: cat /opulent/workspace/artifacts/acumatica-payload.json | npx tsx scripts/acumatica/cli.ts push-both",
-    "durationMs": 2103
+    "durationMs": 1973
   }
 ]
