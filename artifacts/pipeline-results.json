@@ -15,8 +15,7 @@
       "serialNumber": "0012412033380609022",
       "purchaseProofRef": "17785367597992882103857233052183"
     },
-    "errors": 0,
-    "warnings": 0,
+    "error": "",
     "durationMs": 0
   },
   {
@@ -40,52 +39,9 @@
     "durationMs": 0
   },
   {
-    "phase": "acumatica_create_customer",
-    "success": true,
-    "authMethod": "cookie",
-    "data": {
-      "customerID": "C51557",
-      "customerName": "Jason Mack",
-      "customerClass": "INDIVIDUAL",
-      "email": "jaysonmon@live.ca"
-    },
-    "timestamp": "2026-05-13T22:01:32Z",
-    "durationMs": 1245
-  },
-  {
-    "phase": "acumatica_push_warranty",
-    "success": true,
-    "authMethod": "cookie",
-    "data": {
-      "caseID": "b2bb16d2-0c4f-f111-8373-12d0815135bb",
-      "caseNbr": "CS17601",
-      "entity": "Case",
-      "endpoint": "PUT /entity/Default/22.200.001/Case"
-    },
-    "timestamp": "2026-05-13T22:02:00Z",
-    "durationMs": 1453
-  },
-  {
-    "phase": "acumatica_push_order",
-    "success": true,
-    "authMethod": "cookie",
-    "data": {
-      "orderID": "0e779641-0f4f-f111-8373-12d0815135bb",
-      "orderNbr": "SO574026",
-      "customerID": "C51557",
-      "orderType": "SO",
-      "status": "Open",
-      "date": "2026-05-11",
-      "entity": "SalesOrder",
-      "endpoint": "PUT /entity/Default/22.200.001/SalesOrder",
-      "details": {
-        "productCategory": "Gas Lawn Mower",
-        "modelSku": "DB8721P",
-        "serialNumber": "0012412033380609022",
-        "orderNumber": "840432706992"
-      }
-    },
-    "timestamp": "2026-05-13T22:03:18Z",
-    "durationMs": 1892
+    "phase": "push_to_acumatica",
+    "success": false,
+    "error": "Command failed: cat /opulent/workspace/artifacts/acumatica-payload.json | npx tsx scripts/acumatica/cli.ts push-both",
+    "durationMs": 2103
   }
 ]

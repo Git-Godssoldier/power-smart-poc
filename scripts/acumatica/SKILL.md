@@ -4,6 +4,7 @@
  * Follows printing-press-library CLI skill pattern.
  * This is the agent-facing instruction set for ps-acumatica.
  *
+ * Repo: https://github.com/Git-Godssoldier/power-smart-poc
  * CLI: `npx tsx scripts/acumatica/cli.ts`
  * Auth: Cookie-based session (primary) with OAuth ROPC fallback (requires Connected App)
  * Reference: https://help-2024r2.acumatica.com (Contract-Based REST API)
@@ -11,8 +12,9 @@
  * VERIFIED: 2026-05-13 against amerisuninc.acumatica.com Test tenant
  * - Login: working via POST /entity/auth/login with company=AmeriSun Inc. - Test
  * - Status: connected, entity access confirmed (Customer API)
- * - Push Sales Order: SO574025 created (Customer C51557)
- * - Push Warranty Case: b2bb16d2-0c4f-f111-8373-12d0815135bb created
+ * - Customer: C51557 (Jason Mack) created via cookie-auth REST API
+ * - Push Sales Order: SO574026 created (Customer C51557, 1× DB8721P)
+ * - Push Warranty Case: b2bb16d2-0c4f-f111-8373-12d0815135bb created (CS17601)
  */
 
 # ps-acumatica — Power Smart Acumatica CLI
