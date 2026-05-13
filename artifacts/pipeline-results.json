@@ -1,0 +1,46 @@
+{
+  "pipeline": "ps-acumatica-poc1",
+  "timestamp": "2026-05-13T20:50:55.880293Z",
+  "auth": "cookie-based (entity/auth/login)",
+  "results": {
+    "customer": {
+      "id": "e5a57e32-0d4f-f111-8373-12d0815135bb",
+      "customerId": "C51557",
+      "name": "Jason Mack",
+      "email": "jaysonmon@live.ca",
+      "created": true,
+      "httpStatus": 200
+    },
+    "salesOrder": {
+      "id": "01a69244-0d4f-f111-8373-12d0815135bb",
+      "orderNbr": "SO574025",
+      "orderType": "SO",
+      "status": "Open",
+      "date": "2026-05-11",
+      "customerOrder": "840432706992",
+      "product": "Gas Lawn Mower DB8721P",
+      "serialNumber": "0012412033380609022",
+      "platform": "Homedepot",
+      "created": true,
+      "httpStatus": 200
+    },
+    "warrantyCase": {
+      "id": "b2bb16d2-0c4f-f111-8373-12d0815135bb",
+      "created": true,
+      "httpStatus": 200
+    }
+  },
+  "cli": {
+    "login": "success",
+    "status": "connected \u2014 auth: cookie, sampleCustomer: Amazon Vendor Central",
+    "pushWarranty": "success (200)",
+    "pushOrder": "success (200) after Customer creation"
+  },
+  "verification": {
+    "extraction": "10/10 fields, 0 errors, 0 warnings",
+    "durableStorage": "Convex schema with 4 tables",
+    "cliConnectivity": "Verified via cookie-based auth",
+    "apiWriteback": "3 records created in Acumatica sandbox",
+    "documentation": "artifacts/power-smart-poc1-client-document.md"
+  }
+}

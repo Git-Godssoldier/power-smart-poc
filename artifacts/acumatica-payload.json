@@ -1,0 +1,28 @@
+{
+  "order": {
+    "customerName": "Jason Mack",
+    "phone": "+19053755421",
+    "email": "jaysonmon@live.ca",
+    "address": "143A Balls Lane Cobourg ON K9A2L4",
+    "platform": "Homedepot",
+    "orderNumber": "840432706992",
+    "orderedDate": "2026-05-11",
+    "productCategory": "Gas Lawn Mower",
+    "modelSku": "DB8721P",
+    "serialNumber": "0012412033380609022"
+  },
+  "warranty": {
+    "claimantName": "Jason Mack",
+    "phone": "+19053755421",
+    "email": "jaysonmon@live.ca",
+    "address": "143A Balls Lane Cobourg ON K9A2L4",
+    "productCategory": "Gas Lawn Mower",
+    "modelSku": "DB8721P",
+    "serialNumber": "0012412033380609022",
+    "platform": "Homedepot",
+    "orderNumber": "840432706992",
+    "purchaseDate": "2026-05-11",
+    "validationResult": "validated",
+    "validationNotes": "All checks passed"
+  }
+}
